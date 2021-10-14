@@ -78,7 +78,8 @@
     "coveragePathIgnorePatterns": [
       "app.controller.spec.ts",
       "app.module.ts",
-      "main.ts"
+      "main.ts",
+      "company.module.ts"
     ]
   }
 }
