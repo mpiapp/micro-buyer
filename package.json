@@ -79,7 +79,8 @@
       "app.controller.spec.ts",
       "app.module.ts",
       "main.ts",
-      "company.module.ts"
+      "company.module.ts",
+      "role.module.ts"
     ]
   }
 }
