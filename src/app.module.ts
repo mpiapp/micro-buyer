@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CompanyModule } from './company/company.module';
 import { RoleModule } from './role/role.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { RoleModule } from './role/role.module';
     MongooseModule.forRoot(process.env.MONGODB_SRV),
     CompanyModule,
     RoleModule,
+    UserModule,
   ]
 })
 export class AppModule {}
