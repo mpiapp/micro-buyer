@@ -80,7 +80,8 @@
       "app.module.ts",
       "main.ts",
       "company.module.ts",
-      "role.module.ts"
+      "role.module.ts",
+      "user.module.ts"
     ]
   }
 }
