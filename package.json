@@ -72,6 +72,13 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "app.controller.spec.ts",
+      "app.module.ts",
+      "main.ts"
+    ]
   }
 }
