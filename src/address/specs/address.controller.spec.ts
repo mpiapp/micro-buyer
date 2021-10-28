@@ -48,4 +48,9 @@ describe('AddressController', () => {
   it('should edit address', async () => {
     expect(await controller.update('1', address)).toBe(address);
   });
+
+  it('should delete address', async () => {
+    const deleted = await controller.delete('1')
+    expect(deleted.isDeleted).toBe(true);
+  });
 });

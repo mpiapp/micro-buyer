@@ -1,4 +1,4 @@
-import { Body, Controller, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Param, Post, Put } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { AddressService } from './address.service';
 import { addressAddDTO } from './dto/address.add.dto';
@@ -17,5 +17,10 @@ export class AddressController {
     @Put('/:id')
     async update(@Param('id') id: string, @Body() address: addressEditDTO ) {
         return await this.addressService.update(id, address);
+    }
+
+    @Delete('/:id')
+    async delete(@Param('id') id: string) {
+        return await this.addressService.delete(id);
     }
 }

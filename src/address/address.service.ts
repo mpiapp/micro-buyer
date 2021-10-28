@@ -14,4 +14,12 @@ export class AddressService {
     async update(id: string,address: addressEditDTO) {
         return await this.addressRepository.update(id, address);
     }
+
+    async delete(id: string) {
+        const address = {
+            isDeleted: true,
+            deletedAt: new Date()
+        }
+        return await this.addressRepository.delete(id, address);
+    }
 }
