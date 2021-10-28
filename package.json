@@ -81,7 +81,8 @@
       "main.ts",
       "company.module.ts",
       "role.module.ts",
-      "user.module.ts"
+      "user.module.ts",
+      "address.module.ts"
     ]
   }
 }
