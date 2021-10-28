@@ -17,4 +17,8 @@ export class AddressRepository {
     async update(id: string, address: addressEditDTO) {
         return await this.addressModel.findByIdAndUpdate(id, address, { new: true , useFindAndModify: false});
     }
+
+    async delete(id: string, address: {}) {
+        return await this.addressModel.findByIdAndUpdate(id, address, { new: true , useFindAndModify: false});
+    }
 }
