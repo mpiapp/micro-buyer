@@ -44,4 +44,8 @@ describe('AddressController', () => {
   it('should add address', async () => {
     expect(await controller.create(address)).toBe(address);
   });
+
+  it('should edit address', async () => {
+    expect(await controller.update('1', address)).toBe(address);
+  });
 });
