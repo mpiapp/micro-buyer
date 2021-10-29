@@ -29,6 +29,8 @@
     "@nestjs/mongoose": "^9.0.0",
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/swagger": "^5.1.0",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
     "mongoose": "^6.0.10",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
@@ -82,7 +84,8 @@
       "company.module.ts",
       "role.module.ts",
       "user.module.ts",
-      "address.module.ts"
+      "address.module.ts",
+      "myvendor.module.ts"
     ]
   }
 }
