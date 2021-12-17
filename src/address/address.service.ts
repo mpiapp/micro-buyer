@@ -7,6 +7,10 @@ import { AddressRepository } from './respository/address.repository';
 export class AddressService {
     constructor(private readonly addressRepository: AddressRepository) {}
 
+    async get(buyer_id: string) {
+        return await this.addressRepository.get(buyer_id);
+    }
+
     async create(address: addressAddDTO) {
         return await this.addressRepository.create(address);
     }

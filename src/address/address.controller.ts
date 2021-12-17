@@ -1,4 +1,5 @@
-import { Body, Controller, Delete, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { MessagePattern, Payload } from '@nestjs/microservices';
 import { ApiTags } from '@nestjs/swagger';
 import { AddressService } from './address.service';
 import { addressAddDTO } from './dto/address.add.dto';
@@ -22,5 +23,10 @@ export class AddressController {
     @Delete('/:id')
     async delete(@Param('id') id: string) {
         return await this.addressService.delete(id);
+    }
+
+    @MessagePattern('buyer.get.address')
+    async getAddress(@Payload() payload: any): Promise<any>  {
+        return await this.addressService.get(payload.value.buyer_id);
     }
 }

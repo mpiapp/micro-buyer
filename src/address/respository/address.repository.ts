@@ -21,4 +21,8 @@ export class AddressRepository {
     async delete(id: string, address: {}) {
         return await this.addressModel.findByIdAndUpdate(id, address, { new: true , useFindAndModify: false});
     }
+
+    async get(buyer_id: string): Promise<Address> {
+        return await this.addressModel.findOne({ buyer_id: buyer_id });
+    }
 }
