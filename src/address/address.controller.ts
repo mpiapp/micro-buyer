@@ -2,7 +2,6 @@ import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common'
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { ApiTags } from '@nestjs/swagger';
 import { AddressService } from './address.service';
-import { addressAddDTO } from './dto/address.add.dto';
 import { addressEditDTO } from './dto/address.edit.dto';
 
 @ApiTags('Buyer Address')

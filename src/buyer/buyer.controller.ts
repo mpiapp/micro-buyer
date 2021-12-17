@@ -1,8 +1,6 @@
-import { Body, Controller, BadRequestException, Param, Post, Put, Get, HttpStatus } from '@nestjs/common';
+import { Body, Controller, BadRequestException, Post, HttpStatus } from '@nestjs/common';
 import { BuyerService } from './buyer.service';
-import { buyerRegisterDTO } from './dto/buyer.register.dto';
 import { buyerDetailAddDTO } from './dto/buyer.detail.add.dto';
-import { buyerDetailEditDTO } from './dto/buyer.detail.edit.dto';
 import { Buyer } from './schema/buyer.schema';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 

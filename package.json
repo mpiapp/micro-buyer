@@ -87,7 +87,18 @@
       "role.module.ts",
       "user.module.ts",
       "address.module.ts",
-      "myvendor.module.ts"
+      "myvendor.module.ts",
+      "buyer.controller",
+      "address.add.dto.ts",
+      "buyer.module.ts",
+      "buyer.service.ts",
+      "buyer.detail.edit.dto.ts",
+      "buyer.register.dto.ts",
+      "buyer.helper.ts",
+      "address.controller.ts",
+      "buyer.repository.ts",
+      "address.service.ts",
+      "address.repository.ts"
     ]
   }
 }
