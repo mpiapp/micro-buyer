@@ -10,9 +10,9 @@ import { addressEditDTO } from './dto/address.edit.dto';
 export class AddressController {
     constructor(private readonly addressService: AddressService) {}
 
-    @Post()
-    async create(@Body() address: addressAddDTO) {
-        return await this.addressService.create(address);
+    @MessagePattern('buyer.add.address')
+    async create(@Payload() payload: any) {
+        return await this.addressService.create(payload.value);
     }
 
     @Put('/:id')

@@ -7,7 +7,7 @@ import { AddressRepository } from './respository/address.repository';
 export class AddressService {
     constructor(private readonly addressRepository: AddressRepository) {}
 
-    async get(buyer_id: string) {
+    async get(buyer_id: string): Promise<any[]> {
         return await this.addressRepository.get(buyer_id);
     }
 

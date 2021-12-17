@@ -42,7 +42,7 @@ async function bootstrap() {
               
           },
           consumer: {
-              groupId: 'buyer-microservice',
+              groupId: 'buyer-microservice-local',
           }
       }
   });

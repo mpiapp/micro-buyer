@@ -22,7 +22,7 @@ export class AddressRepository {
         return await this.addressModel.findByIdAndUpdate(id, address, { new: true , useFindAndModify: false});
     }
 
-    async get(buyer_id: string): Promise<Address> {
-        return await this.addressModel.findOne({ buyer_id: buyer_id });
+    async get(buyer_id: string): Promise<Address[]> {
+        return await this.addressModel.find({ buyer_id: buyer_id });
     }
 }
