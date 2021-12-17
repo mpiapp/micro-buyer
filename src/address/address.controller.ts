@@ -29,4 +29,9 @@ export class AddressController {
     async getAddress(@Payload() payload: any): Promise<any>  {
         return await this.addressService.get(payload.value.buyer_id);
     }
+
+    @MessagePattern('buyer.get.default.address')
+    async getDefaultAddress(@Payload() payload: any): Promise<any>  {
+        return await this.addressService.get(payload.value.buyer_id);
+    }
 }
